@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: linxu linxu@oxhainan.org
+ * @Date: 2023-04-28 10:12:08
+ * @LastEditors: linxu linxu@oxhainan.org
+ * @LastEditTime: 2023-04-28 15:26:49
+ */
 /* eslint-disable @next/next/no-page-custom-font */
 import "./styles/globals.scss";
 import "./styles/markdown.scss";
@@ -7,10 +14,10 @@ import { getBuildConfig } from "./config/build";
 const buildConfig = getBuildConfig();
 
 export const metadata = {
-  title: "ChatGPT Next Web",
+  title: "Linxu's ChatGPT",
   description: "Your personal ChatGPT Chat Bot.",
   appleWebApp: {
-    title: "ChatGPT Next Web",
+    title: "Linxu's ChatGPT",
     statusBarStyle: "default",
   },
   themeColor: "#fafafa",
