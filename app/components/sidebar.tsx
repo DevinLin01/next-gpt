@@ -205,8 +205,8 @@ function buyCoffee() {
     children: (
       <div className="markdown-body">
         <div className="d-pay">
-          <img src="/wxpay.jpg"></img>
-          <img src="/alipay.jpg"></img>
+          <img className="d-img" src="/wxpay.jpg"></img>
+          <img className="d-img" src="/alipay.jpg"></img>
         </div>
       </div>
     ),
