@@ -28,6 +28,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showToast, showModal } from "./ui-lib";
+import Image from "next/image";
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -99,6 +100,7 @@ export function SideBar(props: { className?: string }) {
       <div className={styles["sidebar-header"]}>
         <div className={styles["sidebar-avatar"]}>
           <img className="d-avatar" src="https://ca.slack-edge.com/T053RUT5U6M-U054318HFDE-72a414b1f8ba-512"></img>
+          {/* <Image className="d-avatar" src={"https://ca.slack-edge.com/T053RUT5U6M-U054318HFDE-72a414b1f8ba-512"} alt={"avatar"} width={40} height={40}/> */}
         </div>
         <div className={styles["sidebar-title"]}>         
           <span className="d-title">Linxu's ChatGPT</span>
