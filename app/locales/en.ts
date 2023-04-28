@@ -37,6 +37,7 @@ const en: LocaleType = {
     },
   },
   Export: {
+    Coffee: "If you find the project helpful and useful to you, you can buy me a coffee",
     Title: "All Messages",
     Copy: "Copy All",
     Download: "Download",

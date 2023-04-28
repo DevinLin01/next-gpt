@@ -89,6 +89,7 @@ interface ModalProps {
   children?: JSX.Element | JSX.Element[];
   actions?: JSX.Element[];
   onClose?: () => void;
+  isCoffee?: boolean;
 }
 export function Modal(props: ModalProps) {
   useEffect(() => {
@@ -107,7 +108,8 @@ export function Modal(props: ModalProps) {
   }, []);
 
   return (
-    <div className={styles["modal-container"]}>
+    // <div className={styles["modal-container"]}>
+    <div className={props.isCoffee ? styles["modal-container-coffee"] : styles["modal-container"]}>
       <div className={styles["modal-header"]}>
         <div className={styles["modal-title"]}>{props.title}</div>
 

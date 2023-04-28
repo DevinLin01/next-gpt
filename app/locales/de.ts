@@ -37,6 +37,7 @@ const de: LocaleType = {
     },
   },
   Export: {
+    Coffee: "",
     Title: "Alle Nachrichten",
     Copy: "Alles kopieren",
     Download: "Herunterladen",

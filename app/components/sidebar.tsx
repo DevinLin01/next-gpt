@@ -4,6 +4,7 @@ import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
+import CoffeesIcon from "../icons/coffee.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
@@ -26,7 +27,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
-import { showToast } from "./ui-lib";
+import { showToast, showModal } from "./ui-lib";
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -96,9 +97,14 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>ChatGPT Next</div>
+        <div className={styles["sidebar-avatar"]}>
+          <img className="d-avatar" src="https://ca.slack-edge.com/T053RUT5U6M-U054318HFDE-72a414b1f8ba-512"></img>
+        </div>
+        <div className={styles["sidebar-title"]}>         
+          <span className="d-title">Linxu's ChatGPT</span>
+        </div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+        <span className="d-title">Build your own AI assistant for free.</span>
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
@@ -146,10 +152,23 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
-          <div className={styles["sidebar-action"]}>
+          {/* <div className={styles["sidebar-action"]}>
             <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />
             </a>
+          </div> */}
+          <div className={styles["sidebar-action"]}>
+            {/* <Link to={Path.Settings}>
+              <IconButton icon={<CoffeesIcon />} shadow />
+            </Link> */}
+            <IconButton
+              icon={<CoffeesIcon />}
+              bordered
+              title={Locale.Chat.Actions.Export}
+              onClick={() => {
+                buyCoffee();
+              }}
+            />
           </div>
         </div>
         <div>
@@ -174,4 +193,37 @@ export function SideBar(props: { className?: string }) {
       ></div>
     </div>
   );
+}
+
+
+// show buy me a coffee
+function buyCoffee() {
+  showModal({
+    title: Locale.Export.Coffee,
+    children: (
+      <div className="markdown-body">
+        <div className="d-pay">
+          <img src="/wxpay.jpg"></img>
+          <img src="/alipay.jpg"></img>
+        </div>
+      </div>
+    ),
+    isCoffee: true
+    // actions: [
+    //   <IconButton
+    //     key="copy"
+    //     icon={<CopyIcon />}
+    //     bordered
+    //     text={Locale.Export.Copy}
+    //     onClick={() => copyToClipboard(mdText)}
+    //   />,
+    //   <IconButton
+    //     key="download"
+    //     icon={<DownloadIcon />}
+    //     bordered
+    //     text={Locale.Export.Download}
+    //     onClick={() => downloadAs(mdText, filename)}
+    //   />,
+    // ],
+  });
 }

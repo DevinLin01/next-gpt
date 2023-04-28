@@ -36,6 +36,7 @@ const tw: LocaleType = {
     },
   },
   Export: {
+    Coffee: "买我一杯咖啡",
     Title: "將聊天記錄匯出為 Markdown",
     Copy: "複製全部",
     Download: "下載檔案",

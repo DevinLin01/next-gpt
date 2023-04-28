@@ -36,6 +36,7 @@ const cn = {
     },
   },
   Export: {
+    Coffee: "如果您觉得项目不错并对您有用，可以请我喝一杯咖啡",
     Title: "导出聊天记录为 Markdown",
     Copy: "全部复制",
     Download: "下载文件",

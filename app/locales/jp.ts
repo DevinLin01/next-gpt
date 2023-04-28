@@ -37,6 +37,7 @@ const jp: LocaleType = {
     },
   },
   Export: {
+    Coffee: "",
     Title: "チャット履歴をMarkdown形式でエクスポート",
     Copy: "すべてコピー",
     Download: "ファイルをダウンロード",

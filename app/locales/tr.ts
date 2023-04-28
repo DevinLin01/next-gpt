@@ -37,6 +37,7 @@ const tr: LocaleType = {
     },
   },
   Export: {
+    Coffee: "",
     Title: "Tüm Mesajlar",
     Copy: "Tümünü Kopyala",
     Download: "İndir",
